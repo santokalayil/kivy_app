@@ -17,6 +17,7 @@ Builder.load_file(filename='calc.kv')
 class MyLayout(Widget):
     number_array = []
     operation_order = []
+
     def clear(self):
         self.ids.calc_input.text = '0'
 
@@ -27,6 +28,7 @@ class MyLayout(Widget):
             self.ids.calc_input.text = ''
         self.ids.calc_input.text += str(button)
 
+    # here onwards continue doing..
     def operation_press(self, button):
         prior = self.ids.calc_input.text
         if prior == '0':
